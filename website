@@ -1,0 +1,133 @@
+import java.io.*;
+
+public class MemeCoinWebsite {
+    public static void main(String[] args) {
+        try {
+            File file = new File("MemeCoinWebsite.html");
+            FileWriter writer = new FileWriter(file);
+
+            String htmlContent = """
+            <!DOCTYPE html>
+            <html lang=\"en\">
+            <head>
+                <meta charset=\"UTF-8\">
+                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+                <title>MemeCoin - The Funniest Crypto</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f9f9f9;
+                        color: #333;
+                    }
+                    header {
+                        background-color: #ffcc00;
+                        padding: 20px;
+                        text-align: center;
+                    }
+                    header h1 {
+                        margin: 0;
+                        font-size: 2.5em;
+                        color: #333;
+                    }
+                    nav {
+                        display: flex;
+                        justify-content: center;
+                        background-color: #333;
+                    }
+                    nav a {
+                        color: white;
+                        text-decoration: none;
+                        padding: 15px 20px;
+                    }
+                    nav a:hover {
+                        background-color: #555;
+                    }
+                    main {
+                        padding: 20px;
+                        text-align: center;
+                    }
+                    .btn {
+                        background-color: #ffcc00;
+                        color: #333;
+                        border: none;
+                        padding: 10px 20px;
+                        font-size: 1em;
+                        cursor: pointer;
+                        margin: 10px;
+                        border-radius: 5px;
+                    }
+                    .btn:hover {
+                        background-color: #e6b800;
+                    }
+                    footer {
+                        background-color: #333;
+                        color: white;
+                        text-align: center;
+                        padding: 10px 0;
+                        position: fixed;
+                        bottom: 0;
+                        width: 100%;
+                    }
+                </style>
+            </head>
+            <body>
+                <header>
+                    <h1>MemeCoin</h1>
+                    <p>The funniest cryptocurrency to ever exist!</p>
+                </header>
+                <nav>
+                    <a href=\"#about\">About</a>
+                    <a href=\"#features\">Features</a>
+                    <a href=\"#roadmap\">Roadmap</a>
+                    <a href=\"#community\">Community</a>
+                </nav>
+                <main>
+                    <section id=\"about\">
+                        <h2>What is MemeCoin?</h2>
+                        <p>MemeCoin is a community-driven cryptocurrency designed for fun, laughs, and financial freedom. Join the revolution today!</p>
+                    </section>
+                    <section id=\"features\">
+                        <h2>Features</h2>
+                        <ul style=\"list-style-type:none; padding: 0;\">
+                            <li> Hilarious memes</li>
+                            <li> Community-focused</li>
+                            <li> Deflationary tokenomics</li>
+                            <li> Moonshot potential</li>
+                        </ul>
+                    </section>
+                    <section id=\"roadmap\">
+                        <h2>Roadmap</h2>
+                        <p>Our roadmap includes:</p>
+                        <ul style=\"list-style-type:circle; text-align: left; display: inline-block;\">
+                            <li>Phase 1: Launch and meme creation</li>
+                            <li>Phase 2: Community building</li>
+                            <li>Phase 3: Exchange listings</li>
+                            <li>Phase 4: MemeCoin to the moon!</li>
+                        </ul>
+                    </section>
+                    <section id=\"community\">
+                        <h2>Join the Community</h2>
+                        <p>Stay updated and connect with fellow MemeCoin enthusiasts:</p>
+                        <button class=\"btn\">Join Our Telegram</button>
+                        <button class=\"btn\">Follow Us on Twitter</button>
+                    </section>
+                </main>
+                <footer>
+                    <p>&copy; 2024 MemeCoin. All Rights Reserved.</p>
+                </footer>
+            </body>
+            </html>
+            """;
+
+            writer.write(htmlContent);
+            writer.close();
+
+            System.out.println("HTML file 'MemeCoinWebsite.html' has been created successfully!");
+        } catch (IOException e) {
+            System.err.println("An error occurred:");
+            e.printStackTrace();
+        }
+    }
+}
